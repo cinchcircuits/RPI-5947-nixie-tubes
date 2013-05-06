@@ -35,10 +35,10 @@ The pin mapping mention tlc5947.c is the wiringPi package pin number.  So run "g
 </th>
 <tr>
 <td>SIN</td><td>0</td><td>17</td><td>GPIO 0</td>
-<td>SCLK</td><td>4</td><td>23</td><td>GPIO 4</td>
-<td>XLAT</td><td>2</td><td>27/21</td><td>GPIO 2</td>
-<td>blank</td><td>3</td><td>23</td><td>GPIO 3</td>
 </tr>
+<tr><td>SCLK</td><td>4</td><td>23</td><td>GPIO 4</td></tr>
+<tr><td>XLAT</td><td>2</td><td>27/21</td><td>GPIO 2</td></tr>
+<tr><td>blank</td><td>3</td><td>23</td><td>GPIO 3</td></tr>
 </table>
 
 RasPiTLC5940
