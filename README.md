@@ -27,12 +27,12 @@ You will have a copy of the tlc lib in your project.  The header need to be modi
 
 The pin mapping mention tlc5947.c is the wiringPi package pin number.  So run "gpio readall" to see how the pins map. Depending on the diagram you find, you will use GPIO or name.  I used the adafruit breakout board, the pins names were the GPIO names.
 <table>
-<th>
-<td>tlc5947</td>
-<td>Wiring Pin</td>
-<td>GPIO</td>
-<td>Name</td>
-</th>
+<tr>
+<th>tlc5947</th>
+<th>Wiring Pin</th>
+<th>GPIO</th>
+<th>Name</th>
+</tr>
 <tr>
 <td>SIN</td><td>0</td><td>17</td><td>GPIO 0</td>
 </tr>
