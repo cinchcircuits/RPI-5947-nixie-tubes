@@ -25,7 +25,21 @@ wiringPi: https://projects.drogon.net/raspberry-pi/wiringpi/
 The git repo for wiringPi is git://git.drogon.net/wiringPi
 You will have a copy of the tlc lib in your project.  The header need to be modified, NUM_TLCS, to specify the number of boards you are daisy chaining.
 
-
+The pin mapping mention tlc5947.c is the wiringPi package pin number.  So run "gpio readall" to see how the pins map. Depending on the diagram you find, you will use GPIO or name.  I used the adafruit breakout board, the pins names were the GPIO names.
+<table>
+<th>
+<td>tlc5947</td>
+<td>Wiring Pin</td>
+<td>GPIO</td>
+<td>Name</td>
+</th>
+<tr>
+<td>SIN</td><td>0</td><td>17</td><td>GPIO 0</td>
+<td>SCLK</td><td>4</td><td>23</td><td>GPIO 4</td>
+<td>XLAT</td><td>2</td><td>27/21</td><td>GPIO 2</td>
+<td>blank</td><td>3</td><td>23</td><td>GPIO 3</td>
+</tr>
+</table>
 
 RasPiTLC5940
 ============
