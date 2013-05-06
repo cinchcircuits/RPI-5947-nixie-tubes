@@ -6,14 +6,15 @@ I have chronodot from http://http://macetech.com hooked in for a tie source.
 
 The chronodot is a I2C device.  The raspberry pi OS you use does not always come ready for I2C. We need to do a bit of work to connect it.
  Adafruit has an excellent tutorial on installing it. But you first need to perform a few installation steps:
-1. sudo apt-get libi2c-dev
-2. modprobe i2c_dev, i2c_bcm2708, rtc_ds1307
-3. lsmod top make sure they are all there.
-4.  edit /etc/modprobe.d/raspi-blacklist.conf  and comment out the line: blacklist i2c-bcm2708
-5. Edit /etc/modules and make sure that you add i2c_dev, i2c_bcm2708, rtc_ds1307 if they are not there.
-6. reboot the Pi.
+<ol>
+<li> sudo apt-get libi2c-dev</li>
+<li> modprobe i2c_dev, i2c_bcm2708, rtc_ds1307</li>
+<li> lsmod top make sure they are all there.</li>
+<li>  edit /etc/modprobe.d/raspi-blacklist.conf  and comment out the line: blacklist i2c-bcm2708</li>
+<li> Edit /etc/modules and make sure that you add i2c_dev, i2c_bcm2708, rtc_ds1307 if they are not there.</li>
+<li> reboot the Pi.</li>
 
-Now you can follow the Adafruit tutortial.   But there are some notes.  The device will be /dev/rtc0 not /dev/rtc
+Now you can follow the Adafruit tutortial.  http://learn.adafruit.com/adding-a-real-time-clock-to-raspberry-pi/wiring-the-rtc  But there are some notes.  The device will be /dev/rtc0 not /dev/rtc
 Depending on when you run i2cdetect, the address might show up as 68, or as UU.  I do not know what the specific meanning of UU is, but it seems to mean it isbeing treated as the system RTC.  You can now just use the standard linux time library to access the RTC.  You do not need to make and i2c calls.
 
 
